@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"name": "MaterializeCcs",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\MaterializeCcs"
+		},
+		{
+			"name": "materializacss_form",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\materializacss_form"
+		},
+		{
+			"name": "JavaScript",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\JavaScript"
+		},
+		{
+			"name": "Practica_form",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\Practica_form"
+		},
+		{
+			"name": "Introsuccion_html",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\Introsuccion_html"
+		},
+		{
+			"name": "Practica 1",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\Practica 1"
+		},
+		{
+			"name": "its_repo",
+			"path": ".."
+		},
+		{
+			"name": "Ley de Ohm",
+			"path": "D:\\Cho Instituto\\Soporte\\3 AÑO\\Practica III\\Ley de Ohm"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Ley de Ohm"
+	}
+}

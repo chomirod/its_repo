@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <title>Ley de Ohm</title>
+    </head>
+    <body>
+        <h4> Ley de Oms</h4>
+        <div class="row">
+            <div class="col s12 ">
+              <div class="card-panel teal">
+                <span class="white-text">Introduzca los dos valores conocidos para calcular el resto de las variables. Para obtener los mejores resultados posibles, restablezca la calculadora después de cada uso para resolver diferentes combinaciones de variables.
+                </span>
+              </div>
+            </div>
+          </div>          
+        <div class="row">
+            <form id= "myForm"> 
+                <div class="input-field col s3">
+                    <div class=""> 
+
+                        <label><h4><a>Resistencia</h4></a></label>
+                        <h3 style="margin:0"></h3>
+                        <input id="rresistencia" class="validate" type="number" placeholder= "Introduzca Valor Resistencia" >
+                        
+                        <button class="btn btn_res" id="resis" type="button">Calcular Resistencia</button>
+                    </div>
+
+                    <div class=> <br>
+
+                        <h2 style="margin:0"></h2>
+                        <label><h4><a>Intensidad</h4></a></label>
+                        <input id="rintensidad" class="validate" type="number" placeholder= "Introduzca Valor Intensidad" >
+                        
+                        <button class="btn btn_inten" id="inten" type="button">Calcular Intensidad</button>
+                    </div>     
+                    
+                    <div class=""> <br>
+
+                        <h3 style="margin:0"></h3>
+                        <label><h4><a>Voltaje</a></h4> </label>
+                        <input id="rvolteos" class="validate" type="number" placeholder= "Introduzca Valor Voltaje" >
+                        
+                        <button class="btn btn_vol" id="vol" type="button">Calcular Voltaje</button>
+                    </div>
+
+
+                 
+                      
+                    
+                </div>
+            </form>
+        
+                
+            
+            
+        <div class="row">
+            <div class="input-field col s6 m7">
+              <div class="card">
+                <div class="card-image">
+                  <img src="https://dam-assets.fluke.com/s3fs-public/6004178-dmm-whatis-ohm-2-715x360.jpg">
+                  <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                  <p>Este programa permite de calcular el voltaje, la intensidad  y la resistencia  en un circuito eléctrico a través de la Ley de Ohm y de sus fórmulas derivadas. Para su uso, escribir en dos de las casillas los parámetros conocidos. Luego hacer click sobre el botón que desea saber el valor. El programa calculará automáticamente los valores restantes. Para efectuar otro cálculo limpiar los datos anteriores con el botón "Reset".</p>
+                </div>
+                <div class="card-action">
+                  
+                  <input id="resultado" class="validate" type="text=number" placeholder= "Resultado" readonly >
+                  <input type="button" onclick="myFunction()" value="RESET"  class="waves-effect waves-light btn-large"></a>
+                  
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="ley.js"></script>
+    </body>
+</html>
