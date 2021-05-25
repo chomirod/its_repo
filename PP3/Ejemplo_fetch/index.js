@@ -22,6 +22,10 @@ const obtener_fotos = async () => {
        `;
 
        total_columnas.push(columna);
+
+
+
+       
    });
 
    document.querySelector("#r_fotos").innerHTML = total_columnas.join("");
