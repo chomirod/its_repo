@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a VueJs</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    
+</head>
+<body>
+    
+
+    <div id="app">
+        <h3 id="">{{nombre}}</h3>
+
+        <p>{{apellido}}</p>
+
+        <div class="mb-3 mt-3">
+            <input type="text" v-model="numero" placeholder="Ingrese Localidad">
+
+        </div>
+
+        <button class="btn btn-primary" v-on:click="modificar" > Modificar nombre</button>
+
+         <div class="mb-3 mt-3">
+                <ul class="list-group">
+                    <li v-for="usuario of lista_usuarios" class="list-group-item">{{usuario.name}}</li>
+                </ul>
+         </div>
+
+    </div>
+
+
+
+    <script>
+              const mispropiedades = {
+
+                data(){
+                    return {
+                        nombre:'Pepito',
+                        apellido:'Argento', 
+                        Localidad:null,
+                        lista_usuarios:[]
+
+                    }
+
+
+                },
+                methods: {
+
+                    modificar(){
+                        this.nombre = 'Juan';
+                        console.log(4* this.numero)
+                    },
+                    mostrarAlerta() {
+                        alert('Probando la propiedad mounted')
+                    },
+
+                        async mostrarUsuarios(){
+                            const resultado = await fetch ("https://jsonplaceholder.typicode.com/users")
+                            this.lista_usuarios = await resultado.json();
+                            
+
+                            
+                        }
+                },
+
+                mounted(){
+
+                    this.mostrarAlerta();
+                    this.mostrarUsuarios();
+
+                }
+
+             }
+
+             Vue.createApp(mispropiedades).mount("#app")
+
+
+
+
+    </script>
+</body>
+</html>
