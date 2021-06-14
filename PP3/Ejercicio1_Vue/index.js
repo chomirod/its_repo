@@ -38,4 +38,4 @@ mounted() {
 
 }
 
-Vue.crateApp(mispropiedades).mount("#app");
+Vue.crateApp(mispropiedades).mount("#app")
