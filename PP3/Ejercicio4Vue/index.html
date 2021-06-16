@@ -18,7 +18,9 @@
 
          <div id = "app" class="container mt-3">
 
-             <div class= row></div>
+             <div class= row>
+               
+             
 
              <div class="col-lg-6">
                   <h4 class="mb-3">Tareas</h4>
@@ -30,14 +32,16 @@
                           <label class="form-label">Descripcion de la Tarea</label>
                           <input v-model="descripcion" type="text" class = "form-control" placeholder="Ingrese Descripcion">
                       </div>
+                      <div class="mb-3">
+                        <label class="form-label">Tiempo</label>
+                        <input v-model="tiempo" type="text" class = "form-control" placeholder="Ingrese Tiempo Estimado">
+                    </div>
+                    <button @click="guardarTarea" class="btn btn-primary"> Guardar</button>
              </div>
 
-             <div class="col-lg-6">
-                <label class="form-label">Tiempo</label>
-                <input v-model="tiempo" type="text" class = "form-control" placeholder="Ingrese Tiempo Estimado">
-            </div>
+            
 
-            <button @click="guardarTarea" class="btn btn-primary"> Guardar</button>
+            
 
             <div class="col-lg-6">
                 <ol class="list-group list-group-numbered">
@@ -51,10 +55,14 @@
                     </li>
                 </ol>
             </div>
+
+          </div>
+
           </div>
 
 
 
           <script src="index.js"></script>
+          
     </body>
 </html>

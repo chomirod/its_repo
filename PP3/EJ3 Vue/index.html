@@ -13,30 +13,46 @@
     <body>
         <nav class="navbar navbar-light bg-info">
             <div class="container-fluid">
-              <span class="navbar-brand mb-0 h2">EJ3 VUE</span>
+              <span class="navbar-brand" >EJ3 VUE</span>
             </div>
-          </nav>
+        </nav>
 
           <div id="app" class="container mt-3">
 
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="mb-3">
-                        <p>Titulo</p>
-                        <input v-model="Titulo" class="form-control" type="text" placeholder="Ingrese Titulo">
-            
-                    </div>
-            
-                    <div class="mb-3">
-                        <label>Url de la Imagen </label>
-                        <input v-model="Url de la imagen" class="form-control" type="text" placeholder="Ingrese Url">
-            
-                    </div>
-            
-                    
-                    <button v-on:click="guardar Imagen" class="btn bg-success.bg-gradient ">Guardar Imagen</button>
-                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mb-3">
+                            <p>Titulo</p>
+                            <input v-model="titulo" class="form-control" type="text" placeholder="Ingrese Titulo">
                 
-            </div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <label>Url de la Imagen </label>
+                            <input v-model="url" class="form-control" type="text" placeholder="Ingrese Url">
+                
+                        </div>
+                
+                        
+                        <button v-on:click="guardar_imagen" class="btn bg-success">Guardar Imagen</button>
+                    </div>
+                     
+                    <div class="row" style="margin-top: 20px;">
+                    
+                        <div class="col-lg-3" v-for= "element of lista_tareas">
+                            <div class="card" >
+                                <img :src= "element.url" class= "card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{element.titulo}}</h5>
+                                    <a class="btn btn-primary">Ver Tutotial</a>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <script src="index.js"></script>
     </body>
 </html>

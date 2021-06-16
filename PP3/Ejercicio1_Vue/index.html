@@ -34,7 +34,7 @@
                 </div>
         
                 <div class="mb-3">
-                    <input v-model="DNI" class="form-control" type="number" placeholder="Ingrese DNI">
+                    <input v-model="dni" class="form-control" type="number" placeholder="Ingrese DNI">
         
                 </div>
                 
@@ -49,7 +49,7 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>DNI</th>
-                            <th> Accion</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -57,7 +57,7 @@
                             <td>{{element.nombre}}</td>
                             <td>{{element.apellido}}</td>
                             <td>{{element.dni}}</td>
-                            <td> <button v-on:click="eliminarEmpleado(index)" class= "btn btn-danger btn-sm"></button></td>
+                            <td> <button v-on:click="eliminarEmpleado(index)" class= "btn btn-danger btn-sm">x</button></td>
 
 
                         </tr>

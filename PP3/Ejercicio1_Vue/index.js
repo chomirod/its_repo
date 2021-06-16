@@ -28,6 +28,9 @@ methods: {
     {
         this.lista_empleados.splice(index,1);
     }
+
+   
+    
 },
 
 mounted() {
@@ -35,7 +38,6 @@ mounted() {
 },
 
 
-
 }
 
-Vue.crateApp(mispropiedades).mount("#app")
+Vue.createApp(mispropiedades).mount("#app")
