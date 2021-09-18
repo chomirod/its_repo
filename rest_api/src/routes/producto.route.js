@@ -6,7 +6,7 @@ const db = require('../database');
 
 router.get('/producto', (req,res) => {
 
-    db.query('select * from cliente', (err,rows) => {
+    db.query('select * from producto', (err,rows) => {
          if(!err){
             res.json(rows);
          }else{
@@ -17,14 +17,32 @@ router.get('/producto', (req,res) => {
 
 });
 
-router.delete('/producto', (req,res) => {
-
-    res.json ('Eliminaste Producto');
+router.delete('/producto/:codigo', async (req,res) => {
+    const id = req.params.codigo;
+    await db.query('delete from producto where id_producto = ?', [id], (err, result) => {
+        if(err){
+            return console.log('Algo Ocurrio')
+        }else{
+            res.json ('Eliminaste Producto');
+        }
+    })
+    
 });
 
 router.post('/producto', (req,res) => {
-    res.json('Esta ruta almacenara un Producto en la base');
+    const unProducto = req.body;
+    db.query('insert into producto set ?', [unProducto], (err, result) => {
+        if(err){
+            return console.log('Algo ocurrio!')
+        }else{
+            res.json("El Producto se inserto exitosamente")
+        }
+    })
+   
 });
+
+
+
 
 router.put('/producto/:codigo', async (req, res) => {
     const id = req.params.codigo
@@ -40,6 +58,17 @@ router.put('/producto/:codigo', async (req, res) => {
     });
     
 });
+
+router.get('/producto/:codigo', async (req,res) =>{
+    const id  = req.params.codigo;
+    await db.query('select * from producto where id_producto = ?', [id], (err,rows) => {
+        if(err){
+            return console.log('Algo Ocurrio')
+        }else{
+            res.json(rows)
+        }
+    })
+})
 
 
 
