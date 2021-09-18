@@ -12,9 +12,17 @@ const mysql = require ('mysql');
 
 });
 
-db.connect();
+db.connect(function(err){
+    if(err){
+        console.log('error de conexion')
+        return;
+    }else{
+        console.log("La conexion ha sido exitosa!")
+    }
+});
 
-console.log("La conexion ha sido exitosa!");
+
 
 
 module.exports = db;
+
