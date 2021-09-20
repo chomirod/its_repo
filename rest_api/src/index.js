@@ -25,4 +25,4 @@ server.use(require('./routes/producto.route'));
 server.listen(server.get('port') );
 
 //mensaje que muestra el servidor al ejecutarse
-console.log('servidor corriendo en el puerto:' , server.get('port'));
+console.log(`Servidor Corriendo en el puerto: ${server.get('port')}`)

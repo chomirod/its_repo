@@ -4,16 +4,16 @@ const router = express.Router();
 
 const db = require('../database');
 
-router.get('/producto', (req,res) => {
+router.get('/producto', async (req,res) => {
 
-    db.query('select * from producto', (err,rows) => {
+    await db.query('select * from producto', (err,rows) => {
          if(!err){
             res.json(rows);
          }else{
              res.json('error al traer datos');
          }
     });
-    //res.json('Haciendo uso de ruta a traves del metodo Get');
+    
 
 });
 
@@ -29,9 +29,9 @@ router.delete('/producto/:codigo', async (req,res) => {
     
 });
 
-router.post('/producto', (req,res) => {
+router.post('/producto', async (req,res) => {
     const unProducto = req.body;
-    db.query('insert into producto set ?', [unProducto], (err, result) => {
+   await db.query('insert into producto set ?', [unProducto], (err, result) => {
         if(err){
             return console.log('Algo ocurrio!')
         }else{
@@ -47,7 +47,7 @@ router.post('/producto', (req,res) => {
 router.put('/producto/:codigo', async (req, res) => {
     const id = req.params.codigo
     const productoModificado = req.body;
-    await db.query('update cliente set ? where id_producto = ?' , [productoModificado, id],(err, result) => {
+    await db.query('update producto set ? where id_producto = ?' , [productoModificado, id],(err, result) => {
         if(err){
             console.log( ' Algo Ocurrio')
         }else{
