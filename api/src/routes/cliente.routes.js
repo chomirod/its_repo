@@ -22,7 +22,7 @@ enrutador.delete('/cliente/:codigo', async (req, res)=> {
     const id = req.params.codigo;
     await db.query('delete from cliente where id_cliente = ?',[id], (err, result) => {
         if (err){
-           return confole.log ('Algo ocurrio')
+           return console.log ('Algo ocurrio')
         }else{
             res.json('Operacion Exitosa')
         }
@@ -42,7 +42,7 @@ enrutador.post('/cliente', (req, res) =>{
 
 })
 
-//implementavion y creacion de Ruta cliente - UPDATE
+//implementacion y creacion de Ruta cliente - UPDATE
 enrutador.put('/cliente/:codigo',async (req, res) => {
 
     //primer paso: Capturar el codigo
