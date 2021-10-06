@@ -16,7 +16,7 @@ const servidor = server.listen(server.get('port'), () => {
 //le pasamos el servidor a socketio, para habilitar el canal websocket
 const io = socketio(servidor)
 
-//establecemos la apertura del canal, para emitir posteriormente
+//establecemos la apertura del canal, para emitir posteriormente los datos
 io.on('connection', (socket) => {
 
     setInterval(() =>{
